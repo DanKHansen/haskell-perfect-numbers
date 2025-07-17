@@ -10,5 +10,4 @@ classify n
       EQ -> Perfect
       GT -> Abundant
   where
-    aliq = sum $ filter p [1 .. div n 2]
-    p i = mod n i == 0
+    aliq = sum $ [f | f <- [1 .. div n 2], mod n f == 0]
